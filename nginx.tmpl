@@ -58,7 +58,7 @@ server {
     
     {{ range $host, $containers := groupByMulti $ "Env.VIRTUAL_HOST" "," }}
     location /healthcheck/{{ $host }}/ {
-        proxy_pass http://{{ $host }}$;
+        proxy_pass http://{{ $host }};
     }
     {{ end }}
     
