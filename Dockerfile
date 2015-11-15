@@ -24,7 +24,7 @@ RUN wget https://github.com/jwilder/docker-gen/releases/download/$DOCKER_GEN_VER
  && rm /docker-gen-linux-amd64-$DOCKER_GEN_VERSION.tar.gz
 
 RUN apt-get update \
- && apt-get install -y curl python \
+ && apt-get install -y curl python unzip \
  && apt-get clean \
  && rm -r /var/lib/apt/lists/*
 
