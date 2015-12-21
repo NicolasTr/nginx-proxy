@@ -36,6 +36,8 @@ WORKDIR /app/
 
 ENV DOCKER_HOST unix:///tmp/docker.sock
 
+RUN echo 'client_max_body_size 100m;' > /etc/nginx/conf.d/my_proxy.conf
+
 VOLUME ["/etc/nginx/certs"]
 
 ENTRYPOINT ["/app/docker-entrypoint.sh"]
